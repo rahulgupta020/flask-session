@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block body %}
+    {% if session.username %}
+        <h6>Hello {{session.username}} <a href="/logout">Logout</a></h6>
+    {% else %}
+        <h6>Kindly Login <a href="/login">Logout</a></h6>
+    {% endif %}
+{% endblock %}
